@@ -76,3 +76,24 @@ def rabin_karp(s, p):
         if i < n - m:
             y = (256 * (y - h * ord(s[i])) + ord(s[i + m])) % q
     return -1
+
+
+def brute_force(s, p):
+    """Returns the index of the first occurrence of the pattern p as a
+    substring in the string s or -1 if p does not occur in s.
+
+    Uses brute force algorithm (worst case O(nm)).
+
+    Args:
+        s: string to check for existence of pattern inside
+        p: pattern to look for inside the string
+    """
+    n, m = len(s), len(p)
+    if not m:
+        return 0
+    if n < m:
+        return -1
+    for i in range(n - m + 1):
+        if all(s[i + j] == p[j] for j in range(m)):
+            return i
+    return -1
