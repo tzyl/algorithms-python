@@ -12,7 +12,7 @@ def edit_distance(s1, s2):
             if s1[i - 1] == s2[j - 1]:
                 dp[i][j] = dp[i - 1][j - 1]
             else:
-                dp[i][j] = 1 + min(dp[i - 1][j],      # Remove s1[i]
-                                   dp[i][j - 1],      # Insert s1[i]
-                                   dp[i - 1][j - 1])  # Substitute s1[i - 1] for s2[j - 1]
+                dp[i][j] = 1 + min(dp[i - 1][j],      # Remove
+                                   dp[i][j - 1],      # Insert
+                                   dp[i - 1][j - 1])  # Substitute
     return dp[m][n]

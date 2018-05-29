@@ -9,7 +9,7 @@ def shuffle(A):
 
 
 def random_sample(m, n):
-    """Returns a random sample of m integers from .[1,...,n] as a list."""
+    """Returns a random sample of m integers from [1,...,n] as a list."""
     if m == 0:
         return []
     else:

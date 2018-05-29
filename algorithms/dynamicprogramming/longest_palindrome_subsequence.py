@@ -1,4 +1,5 @@
-from .longest_common_subsequence import longest_common_subsequence, get_lcs
+from algorithms.dynamicprogramming.longest_common_subsequence import \
+    longest_common_subsequence
 
 
 def longest_palindrome_subsequence(s):
@@ -36,7 +37,9 @@ def get_lps(s, A, B):
             i += 1
         elif B[i][j] == "left":
             j -= 1
-    return "".join(palindrome_chars) + s[i:j+1] + "".join(palindrome_chars[::-1])
+    return ("".join(palindrome_chars) +
+            s[i:j+1] +
+            "".join(palindrome_chars[::-1]))
 
 
 def longest_palindrome_subsequence2(s):
@@ -45,18 +48,3 @@ def longest_palindrome_subsequence2(s):
     s2 = s[::-1]
     lps = longest_common_subsequence(s1, s2)
     return lps
-
-
-# if __name__ == '__main__':
-#     # print(longest_common_subsequence("abcde", "akklklmkknnbmlknlknncknkklndknklepkpo"))
-#     test1 = "character"
-#     test2 = "abccba"
-
-#     lps = longest_palindrome_subsequence(test1)
-#     print(lps, len(lps))
-#     lps = longest_palindrome_subsequence(test2)
-#     print(lps, len(lps))
-#     lps = longest_palindrome_subsequence2(test1)
-#     print(lps, len(lps))
-#     lps = longest_palindrome_subsequence2(test2)
-#     print(lps, len(lps))

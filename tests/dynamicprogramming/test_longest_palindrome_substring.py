@@ -1,5 +1,6 @@
 import unittest
-from algorithms.dynamic_programming.longest_palindrome_substring import *
+from algorithms.dynamicprogramming.longest_palindrome_substring import \
+    longest_palindrome_substring
 
 
 class TestLongestPalindromeSubstring(unittest.TestCase):

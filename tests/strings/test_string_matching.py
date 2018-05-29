@@ -1,5 +1,5 @@
 import unittest
-from algorithms.string.matching import kmp, rabin_karp, brute_force
+from algorithms.strings.matching import kmp, rabin_karp, brute_force
 
 
 class TestStringMatching(unittest.TestCase):

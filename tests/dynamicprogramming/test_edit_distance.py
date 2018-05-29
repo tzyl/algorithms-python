@@ -1,5 +1,5 @@
 import unittest
-from algorithms.dynamic_programming.edit_distance import *
+from algorithms.dynamicprogramming.edit_distance import edit_distance
 
 
 class TestEditDistance(unittest.TestCase):
