@@ -65,7 +65,7 @@ class SegmentTree:
             )
 
     def update(self, idx, x):
-        """Updates the value at the array index i to be x.
+        """Updates the value at the array index idx to be x.
 
         Args:
             idx: index in the original array to update
